@@ -123,7 +123,7 @@ int main(int argc, char **argv)
     while (!WindowShouldClose()) {
         BeginDrawing();
         if (IsKeyPressed(KEY_F5)) {
-            ret = js_dofile(J, "game.js");
+            ret = js_dofile(J, input_path);
             assert(ret == 0);
         }
         if (js_try(J)) {
